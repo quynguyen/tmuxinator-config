@@ -1,6 +1,6 @@
-# ~/.tmuxinator/dbs.yml
+# ~/.tmuxinator/cxp.yml
 
-name: dbs
+name: cxp
 root: ~/
 
 # Optional tmux socket
@@ -22,15 +22,10 @@ windows:
   - root:
       panes:
         - cd ~
-  - microservices:
+  - docker:
       panes:
-        - cd ~/projects/scratch/bb6/dbs/audit; mvn blade:runner
-        - cd ~/projects/scratch/bb6/dbs/entitlements; mvn blade:runner
-        - cd ~/projects/scratch/bb6/dbs/limit; mvn blade:runner
-        - cd ~/projects/scratch/bb6/dbs/contact-manager; mvn blade:runner
-        - cd ~/projects/scratch/bb6/dbs/product-summary; mvn blade:runner
-        - cd ~/projects/scratch/bb6/dbs/transactions; mvn blade:runner
-        - cd ~/projects/scratch/bb6/dbs/payments; mvn blade:runner
-  - editors:
+        - cd ~/projects/scratch/bb6/cx6; docker-compose up -d activemq mysql
+        - cd ~/projects/scratch/bb6/cx6; docker-compose logs -f
+  - cxp:
       panes:
-        - cd ~
+        - cd ~/projects/scratch/bb6/cx6; mvn blade:runner

@@ -1,6 +1,6 @@
-# ~/.tmuxinator/bb-infra.yml
+# ~/.tmuxinator/dbs-infra.yml
 
-name: bb-infra
+name: dbs-infra
 root: ~/
 
 # Optional tmux socket
@@ -24,8 +24,8 @@ windows:
         - cd ~
   - docker:
       panes:
-        - cd ~/projects/scratch/backbase-dbs-training/backbase6/dbs; docker-compose up -d activemq mysql
-        - cd ~/projects/scratch/backbase-dbs-training/backbase6/dbs; docker-compose logs -f
+        - cd ~/projects/scratch/bb6/dbs; docker-compose up -d activemq mysql
+        - cd ~/projects/scratch/bb6/dbs; docker-compose logs -f
   - infra:
       panes:
-        - cd ~/projects/scratch/backbase-dbs-training/backbase6/dbs/infra; mvn blade:runner
+        - cd ~/projects/scratch/bb6/dbs/infra; mvn blade:runner
