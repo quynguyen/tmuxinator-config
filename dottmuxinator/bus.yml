@@ -1,6 +1,6 @@
 # ~/.tmuxinator/web.yml
 
-name: web
+name: bus
 root: ~/
 
 # Optional tmux socket
