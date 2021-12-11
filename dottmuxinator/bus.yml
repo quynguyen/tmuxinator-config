@@ -19,9 +19,6 @@ tmux_options: -2
 # tmux_command: byobu
 
 windows:
-  - root:
-      panes:
-        - sudo su
   - shell:
       layout: even-horizontal
       panes:
