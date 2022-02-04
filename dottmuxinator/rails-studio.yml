@@ -1,0 +1,37 @@
+# ~/.tmuxinator/web.yml
+
+name: rails-studio
+root: ~/
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+tmux_options: -2
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+windows:
+  - events:
+      layout: even-horizontal
+      panes:
+        - cd ~/projects/courses/rails-studio/eventz
+        - cd ~/projects/courses/rails-studio/eventz
+  - flix:
+      layout: even-horizontal
+      panes:
+        - cd ~/projects/courses/rails-studio/flix
+        - cd ~/projects/courses/rails-studio/flix
+  - solution:
+      layout: even-horizontal
+      panes:
+        - cd ~/projects/courses/rails-studio-solutions
+        - cd ~/projects/courses/rails-studio-solutions
+
