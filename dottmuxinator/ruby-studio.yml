@@ -23,7 +23,7 @@ windows:
       pre: cd ~/projects/courses/ruby-studio/studio_movie
       panes:
         - nvim
-        - nvim
+        - ls
         - watch -c rspec . --color --format doc
         - ri -i 
   - game:
@@ -31,12 +31,6 @@ windows:
       pre: cd ~/projects/courses/ruby-studio/studio_game
       panes:
         - nvim
-        - nvim
+        - ls
         - watch -c rspec . --color --format doc
         - ri -i 
-  - solution:
-      layout: even-horizontal
-      panes:
-        - cd ~/projects/courses/ruby-studio-solutions
-        - cd ~/projects/courses/ruby-studio-solutions
-

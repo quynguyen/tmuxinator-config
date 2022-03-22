@@ -1,6 +1,5 @@
 # ~/.tmuxinator/web.yml
-
-name: rails-studio
+name: ruby-studio
 root: ~/
 
 # Optional tmux socket
@@ -19,31 +18,25 @@ tmux_options: -2
 # tmux_command: byobu
 
 windows:
-  - events:
+  - demo:
       layout: tiled
-      pre: cd ~/projects/courses/rails-studio/eventz
+      pre: cd ~/projects/courses/ruby-blocks
       panes:
         - nvim
-        - clear
-        - clear
-        - clear
-  - flix:
+        - nvim
+        - watch -c rspec . --color --format doc
+        - ri -i
+  - exercise:
       layout: tiled
-      pre: cd ~/projects/courses/rails-studio/flix
+      pre: cd ~/projects/courses/ruby-blocks
       panes:
         - nvim
-        - clear
-        - clear
-        - clear
-  - solution-eventz:
+        - nvim
+        - watch -c rspec . --color --format doc
+        - ri -i
+  - solution:
       layout: tiled
-      pre: cd ~/projects/courses/rails-studio-solutions/pragstudio-rails-code/eventz
-      panes:
-        - clear
-        - clear
-  - solution-flix:
-      layout: tiled
-      pre: cd ~/projects/courses/rails-studio-solutions/pragstudio-rails-code/flix
+      pre: cd ~/projects/courses/ruby-blocks
       panes:
         - clear
         - clear
